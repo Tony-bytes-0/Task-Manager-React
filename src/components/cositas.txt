@@ -1,0 +1,46 @@
+
+    newTask = function(Name, description ){
+        let base = document.createElement('div')
+        let nameBox = document.createElement('h1')
+        let descriptionBox = document.createElement('h1')
+
+        nameBox.style.display = 'flex'
+        nameBox.innerHTML = Name
+
+        descriptionBox.style = {'display':'flex','background':'green'}
+        descriptionBox.innerHTML = description
+
+        base.appendChild(nameBox)
+        base.appendChild(descriptionBox)
+       console.log( base.style.display )
+        return base
+    }
+
+
+            <div id='temporalContainer' style={{'display':'none','visibility':'hidden'}} 
+            onClick={() => {
+            let n = document.getElementById('TaskName').innerHTML;
+            let d = document.getElementById('TaskDescription').innerHTML;
+            document.getElementById('Tasks_taskList').appendChild((this.newTask(n,d)))
+        }}>
+            <p id='TaskName'></p>
+            <p id='TaskDescription'></p>
+            <p id='incremental'>a</p>
+        </div>
+
+
+
+        aqui iban metidos los Tasks_taskList
+
+            render() {
+        return (<>
+        <div id='Tasks' style={TaskStyles} className='container'>
+            <h1 className='align-self-center'>Task List</h1>
+            <div id='Tasks_taskList' className='container' >
+               
+               <New/>
+                
+            </div>
+        </div>
+        </>)
+    }

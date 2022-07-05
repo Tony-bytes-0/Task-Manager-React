@@ -44,3 +44,8 @@
         </div>
         </>)
     }
+
+    //aqui iba el boton de refrescar
+    <button id='fetchBtn' style={btn} className='btn btn-warning col-5' onClick ={() => {
+                    this.viewAllTasks()
+                    }}>#DEV</button>

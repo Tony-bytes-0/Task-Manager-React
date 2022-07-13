@@ -6,7 +6,6 @@ class New extends SameMethods {
         let x = rute
         if(x.style.visibility === 'visible'){x.style.visibility = 'hidden';x.style.opacity = '0'}
         else{x.style.visibility = 'visible';x.style.opacity = '100'}
-        
     }
     captureInput = function(param){
         let x = document.getElementById(param).value;//console.log(x)
@@ -43,8 +42,8 @@ class New extends SameMethods {
     
     render(){return(<>
                     <div id={this.props.ID + 'view'} className='container rounded view'>
-                        <h1 id ={this.props.ID +'Name'} className='bg-primary rounded viewTittle'>{this.props.Name}</h1>
-                        <p id ={this.props.ID +'description'} style={{'display':'flex'}}>{this.props.description}</p>
+                        <h1 id ={this.props.ID +'Name'} className='bg-primary rounded viewTittle tittle'>{this.props.Name}</h1>
+                        <p id ={this.props.ID +'description'} className='view-description'>{this.props.description}</p>
 
                         <div id={this.props.ID +'modalEdit'} className='modalEdit'>
 
@@ -82,7 +81,7 @@ class New extends SameMethods {
                         </div>
                     </div>
                     <div id={this.props.ID}  className='rounded mainTask'>
-                        <h1 id={this.props.ID + 'h1Name'} className='simpleCentrate'>{this.props.Name}</h1>
+                        <h1 id={this.props.ID + 'h1Name'} className='simpleCentrate tittle'>{this.props.Name}</h1>
                         <div className='btnBox container simpleCentrate'>
 
                             <button style={{'margin':'1vw'}} className='btn btn-primary col-3' onClick={() => {

@@ -26,22 +26,25 @@ class AddTask extends SameMethods {
             "headers": {'Content-Type': 'application/json'}
         }
         fetch(url, data)
-        .then(prom => this.viewAllTasks())
+        .then(prom => {this.viewAllTasks()})
     }
 
     render() { 
         return (<>
+        <div id='spinner'>
+            <h1 id='spinner_Text'></h1>
+        </div>
             <div id='AddTask Div' className='base container rounded' >
 
                 <div id='AddTask_taskName' className='container rounded inner'> 
-                <h1 className='simpleCentrate content-align-center'>Task Name</h1>
+                <h1 className='simpleCentrate content-align-center tittle'>Task Name</h1>
                     <input id='inputTaskName' type='text' 
                         style={{'width':'100%','height':'5%','padding':'0.5vw','margin':'5%'}}>
                     </input>  
                 </div>
 
                 <div id='AddTask_Description' className='container rounded inner'> 
-                <h1 className='simpleCentrate'>Description</h1>
+                <h1 className='simpleCentrate tittle'>Description</h1>
                     <textarea id='inputTaskDescription' 
                         style={{'width':'100%','height':'15%', 'padding':'0.5vw','margin':'1vw'}}>
                     </textarea> 

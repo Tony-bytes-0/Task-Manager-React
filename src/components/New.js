@@ -4,8 +4,9 @@ class New extends SameMethods {
     state = {largeView:false,baseUrl:"http://127.0.0.1:3939/api/tasks"}
     viewHide = function(rute){
         let x = rute
-        if(x.style.visibility === 'visible')x.style.visibility = 'hidden';
-        else{x.style.visibility = 'visible'}
+        if(x.style.visibility === 'visible'){x.style.visibility = 'hidden';x.style.opacity = '0'}
+        else{x.style.visibility = 'visible';x.style.opacity = '100'}
+        
     }
     captureInput = function(param){
         let x = document.getElementById(param).value;//console.log(x)
@@ -45,7 +46,7 @@ class New extends SameMethods {
                         <h1 id ={this.props.ID +'Name'} className='bg-primary rounded viewTittle'>{this.props.Name}</h1>
                         <p id ={this.props.ID +'description'} style={{'display':'flex'}}>{this.props.description}</p>
 
-                        <div id={this.props.ID + 'modalEdit'} className='modalEdit'>
+                        <div id={this.props.ID +'modalEdit'} className='modalEdit'>
 
                             <textarea id={this.props.ID + 'modalInputTittle'} className='modalInput'></textarea>
                             <textarea id={this.props.ID + 'modalInputDescription'} className='modalInput'></textarea>
